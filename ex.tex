@@ -17,6 +17,8 @@
 \usepackage{fancyhdr}
 \usepackage{nicefrac}
 \usepackage{tabularx}
+\usepackage{txfonts}
+\usepackage{cancel}
 
 \renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
 \newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} 
@@ -56,7 +58,7 @@
 \newpage
 \marginpar {22.10.2013}
 \section{Kristalline, quasikristalline und amorphe Festkörper}
-	\subsection{Das periodische Gitter im Ortraum}
+	\subsection{Das periodische Gitter im Ortsraum}
 		\subsubsection{Einführung}
 			\begin{figure}[H]
 				\centering
@@ -108,13 +110,13 @@
 				\item Spiegelungen
 				\item Drehsymmetrien
 			\end{itemize}
-			\emph{Definition}: Eine Drehachse, bei der der Kristall nach 
+			\paragraph*{Definition:} Eine Drehachse, bei der der Kristall nach 
 			Drehung um den Winkel $\nicefrac{2\pi}{n}$ 
 			($n \in \mathbb{N}$) in sich selbst übergeht, heißt 
 			\emph{n-zählige Drehachse}\\
-			\emph{Behauptung}: $n=1, 2, 3, 4, 6$; sonst keine Werte 
+			\paragraph*{Behauptung:} $n=1, 2, 3, 4, 6$; sonst keine Werte 
 			möglich\\
-			\emph{Beweis}: 
+			\paragraph*{Beweis:} 
 			\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6\textwidth]
@@ -148,7 +150,7 @@
 				(\nicefrac{2\pi}{n})}_{\text{\normalfont Wann ist dies 
 				eine ganze Zahl?}} = m}	
 			\end{align*}
-			\emph{graphisch}:
+			\paragraph*{graphisch:}
 			\begin{figure}[H]
 				\centering
 				\begin{minipage}[c]{0.6\textwidth}
@@ -177,138 +179,306 @@
 			$\Rightarrow$ $n \in {1, 2, 3, 4, 6}$ q.e.d.\\
 			
 			In 3D existieren 14 verschiedene Raumgitter, die man als 
-			\emph{Bravais-Gitter} bezeichnet.
-			Diese können in sieben verschiedene \emph{Kristallsysteme} 
-			eingeordnet werden.
+			\emph{Bravais-Gitter} bezeichnet. Diese können in sieben 
+			verschiedene \emph{Kristallsysteme} 
+			eingeordnet werden.\\
 			
-			BILD POWERPOINTFOLIE
+			BILD POWERPOINTFOLIE\\
 
 \marginpar {29.10.2013}	
 
 			Häuufig möchte man Netzebenen bzw. Netzebenenscharen kennen.
 			$\Rightarrow$ Miller'sche Indizes
 			
-			\emph{Definition}: Gegeben seien die Kristallachsen 
+			\paragraph*{Definition:} Gegeben seien die Kristallachsen 
 			$\vec{a_1}$, $\vec{a_2}$, $\vec{a_3}$ (nicht unbedingt 
 			kartesisch, nich unbedingt primitiv). Die Ebene sei 
 			aufgespannt durch die drei Vektoren $n_{1}\vec{a_1}$, 
 			$n_{2}\vec{a_2}$, $n_{3}\vec{a_3}$; $n_{1}, n_{2}, n_{3} 
 			\in \mathbb{N}$
-			
-			BILD
-			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.6\textwidth]{pics/pic006.jpg}
+				%\caption{}
+			\end{figure}
 			Die (kleinsten) ganzen Zahlen, die sich verhalten wie die 
 			Kehrwerte von n1, n2, n3 bilden die Miller'schen Indizes.
 			\emph{Beispiel}: $\left( \frac{1}{2}, \frac{1}{3}, 
-			\frac{1}{1} \right) \Rightarrow (3,2,6)$ FEHLT WAS Meist 
-			lässt man die Kommata weg, also "$(326)$". Negative Werte 
-			werden druch Balken dargestellt, also z.B 
-			$(32\overline{6})$. Wird eine Achse nicht geschnitten (ist 
-			also der Achsenabschnitt = $\inf$), so ist der zugehörige 
-			Miller'sche Index $=0$. 
-			\emph{Beispiel}:
-			
-			BILD BILD
+			\frac{1}{1} \right) \Rightarrow (3,2,6)$. Meist lässt man 
+			die Kommata weg, also "`$(326)$"'. Negative Werte werden 
+			durch Balken dargestellt, also z.B $(32\overline{6})$. Wird 
+			eine Achse nicht geschnitten (ist also der Achsenabschnitt 
+			= $\infty$), so ist der zugehörige Miller'sche Index $=0$.
+			\paragraph*{Beispiel:} 
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{pics/pic007.jpg}
+					%\caption{}
+				\end{figure}
 			
 		\subsubsection{Einfache Kristallstrukturen und ihre Bindung}
-			Natriumchloridstruktur:
-				\addmargin{1cm}
-				\emph{Beispiel}: NaCl, KCl, MnO, KBr, $\ldots${}\\
-				\emph{Bravais-Gitter}: kubisch flächenzentriert (fcc)\\
-				\emph{Basis}: ein Na und ein Cl (beim NaCl)
-				\emph{Bindung}: ionisch
-				\addmargin{-1cm}
-				Na hat die Elektronenkonfiguration $1s^{2}2s^{2}2p^{6}3s^{1}$
-				Cl $1s^{2}2s^{2}2p^{6}3s^{2}3p^{5}$
-				$\Rightarrow$ gibt das Na ein Elektron an das Cl ab, so 
-				weisen beide abgeschlossene Schalen auf. Es entsteht ein Na$^{+}$
-				und Cl$^{-}$ Ion, die sich auf Grund der Coulombkraft anziehen\\
-				
-				Wir betrachten \emph{$N=N_{A}$} Ionenpaare. Es v die Coulombenergie
+			\paragraph*{Natriumchloridstruktur:}
+				\subparagraph*{Beispiel:} NaCl, KCl, MnO, KBr, $\ldots$
+				\subparagraph*{Bravais-Gitter:} kubisch 
+				flächenzentriert (fcc)
+				\subparagraph*{Basis:} ein Na und ein Cl (beim NaCl)
+				\subparagraph*{Bindung:} ionisch
+				Na hat die Elektronenkonfiguration 
+				1s$^{2}$2s$^{2}$2p$^{6}$3s$^{1}$ Cl 
+				1s$^{2}$2s$^{2}$2p$^{6}$3s$^{2}$3p$^{5}$ $\Rightarrow$ 
+				gibt das Na ein Elektron an das Cl ab, so weisen beide 
+				abgeschlossene Schalen auf. Es entsteht ein Na$^{+}$ 
+				und Cl$^{-}$ Ion, die sich auf Grund der Coulombkraft 
+				anziehen\\
+				Wir betrachten \emph{$N=N_{A}$} Ionenpaare. Es v die 
+				Coulombenergie
 				\begin{align*}
-					U^{c} = N \sum_{j, j\not i} \frac{\pm e^{2}}{4\pi \epsilon_{0} r_{ij}}\\
-					+ \text{entspricht Abstoßung Na$^{+}$}Na$^{+}$} (i in Na$^{+}$} gewählt)\\
-					- \text{entspricht Anziehung Na$^{+}$}Cl$^{-}$}}
+					U^{c} = & N \sum_{j, j\neq i} \frac{\pm e^{2}}{4\pi 
+					\epsilon_{0} r_{ij}}\\
+					& + \text{entspricht Abstoßung Na$^{+}$Na$^{+}$ (i 
+					in Na$^{+}$ gewählt)}\\
+					& - \text{entspricht Anziehung Na$^{+}$Cl$^{-}$}
 				\end{align*}
-				Mit der Definition $r_{ij} :\= p_{ij}r_{0}$, $r_{0}$ ist der Abstand nächster Nachbarn wird 
-				hieraus
-					\begin{align*}
-						U^{c} = \frac{Ne^{2}}{4\pi\epsilon_{0}r_{0}}\underbrace{\sum_{j, j nicht i} \frac{\pm 1}{p_{ij}}_{:= -\alpha}
-					\end{align*}
+				Mit der Definition $r_{ij} := p_{ij}r_{0}$, $r_{0}$ ist 
+				der Abstand nächster Nachbarn wird hieraus
+				\begin{align*}
+					U^{c} = \frac{Ne^{2}}{4\pi\epsilon_{0}r_{0}} 
+					\underbrace {\sum_{j, j \neq i} 
+					\frac{\pm 1}{p_{ij}}}_{\coloneqq -\alpha}
+				\end{align*}
 				$[\alpha] = 1$, $\alpha > 0$ sonst $U^{c} > 0$
 				
-				
-				\emph{Beispiel}: (1D Kette)
+				\paragraph*{Beispiel:} (1D Kette)\\
 				BILD
 				
-				$\alpha = 2\left( \frac{1}{1} - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} \ldots${}
-				mit $\ln (1+x) =x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - \frac{x^{4}}{4} + \frac{x^{5}}{5} \ldots $
+				$\alpha = 2\left( \frac{1}{1} - \frac{1}{2} + 
+				\frac{1}{3} - \frac{1}{4} + \frac{1}{5} \ldots \right)$
+				mit $\ln (1+x) =x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - 
+				\frac{x^{4}}{4} + \frac{x^{5}}{5} \ldots$\\
+				In 3D ist die Summation im Allgemeinen \emph{viel} 
+				schwieriger. Die Reihen konvergieren oft schlecht 
+				$\Rightarrow${}	"`geschickte"' umgruppierung der 
+				Summanden\\
 				
+				\paragraph*{Beispiel:} (NaCl)\\
+				\begin{figure}[H]
+					\centering
+					\begin{minipage}[c]{0.5\textwidth}
+						\centering
+						\begin{tabular}{cc}
+							\toprule{}
+							Ionen		&	Abstand		\\
+							\midrule{}
+							Na$^{+}$	&	0			\\
+							6Cl$^{-}$	&	$r_{0}$		\\
+							12Na$^{+}$	&	$\sqrt{2}r_{0}$\\
+							8Cl$^{-}$	&	$\sqrt{3}r_{0}$\\
+							6Na$^{+}$	&	$\sqrt{4}r_{0}$\\
+							\vdots		&	\vdots{}	\\
+							\bottomrule
+						\end{tabular}
+					\end{minipage}	
+					\begin{minipage}[c]{0.49\textwidth}
+						$\Rightarrow \alpha = \frac{6}{1} - 
+						\frac{12}{\sqrt{2}} + \frac{8}{\sqrt{3}} - 
+						\frac{6}{\sqrt{4}} = 1,7475$
+					\end{minipage}
+				\end{figure}
 				
-				In 3D ist die Summation im Allgemeinen \emph{viel} schwieriger. Die Reihen konvergieren oft schlecht $\Rightarrow${}
-				"geschickte" umgruppierung der Summanden\\
+				$\sum = 6; -2,48; 2,133; -0,86;$
 				
-				\emph{Beispiel}: (NaCl)
-				\begin{tabular}{cc}
-					\toprule{}
-					Ionen		&	Abstand		\\
-					\midrule{}
-					Na$^{+}$	&	0			\\
-					6Cl$^{-}$	&	$r_{0}$		\\
-					12Na$^{+}$	&	$\sqrt{2}r_{0}$\\
-					8Cl$^{-}$	&	$\sqrt{3}r_{0}$\\
-					6Na$^{+}$	&	$\sqrt{4}r_{0}$\\
-					\vdots		&	\vdots{}
-					\bottomrule
-				\end{tabular}
-				$\Rightarrow \alpha = \frac{6}{1} - \frac{12}{\sqrt{2} + \frac{8}{\sqrt{3} - \frac{6}{\sqrt{4} = 1,7475$\\
-				$\sum = $
-				
-				Es existiert auch eine Abstoßende wechselwirkung auf Grund der überlappenden Elektronenhüllen
-				und des \emph{Pauliverbots}. Dies ist ein quantenmechanischer Effekt. Man setzt \emph{phänomenologisch} an
+				Es existiert auch eine Abstoßende wechselwirkung auf 
+				Grund der überlappenden Elektronenhüllen und des 
+				\emph{Pauliverbots}. Dies ist ein quantenmechanischer 
+				Effekt. Man setzt \emph{phänomenologisch} an
+				\begin{center}
+					\fbox{$U_{i}^{B} = +Be^{\nicefrac{r_{ij}}{\rho}}$} 
+					Born-Mayer-Potential
+				\end{center}	
+				$B$ und $\rho$ sind materialspezifische Konstanten. 
+				Summation also nur über nächte Nachbarn (NN)
 				\begin{align*}
-					U_{i}^{B} = +Be^{\nicefrac{r_{ij}}{\rho}}
-				\end{align*}
-				KASTEN DRUM CAPTOPN: Born-Mayer-Potential
-				$B$ und $\rho$ sind materialspezifische Konstanten. Summation also nur über nächte Nachbarn (NN)
-				\begin{align*}
-					U^{B} = N \cdot z \cdot B \cdot e^{\nicefrac{r_{ij}}{\rho}}\\
-					N: Zahl der Ionenpaare, auch "Koordinationszahl", z.B. Na$^{+}$ hat $n = 6$					
+					U^{B} = & N \cdot z \cdot B \cdot 
+					e^{\nicefrac{r_{ij}}{\rho}}\\
+					& \text{$N$: Zahl der Ionenpaare}\\
+					& \text{$z$: Zahl der nächsten Nachbarn, auch 
+					"`Koordinationszahl"', z.B. Na$^{+}$ hat $z = 6$}					
 				\end{align*}
 				Die gesamte Energie ist 
 				\begin{align*}
-					U = U^{C} + U^{B}\\
-					\Rightarrow U = -N \left( \frac{e^{2}}{4\pi\epsilon_{0}}\alpha - z\cdot Be^{\nicefrac{r_{0}}{\rho}}
+					U = & U^{C} + U^{B}\\
+					\Rightarrow U = & -N \left( 
+					\frac{e^{2}}{4\pi\epsilon_{0}} \alpha - z \cdot B 
+					e^{ \nicefrac{ r_{0} }{ \rho} } \right)
 				\end{align*}
-				\emph{graphisch}:
-				BILD
+				\paragraph*{graphisch:}
+				BILD\\
 				
 				Gleichgewichtslage bei $\frac{dU}{dr_{0}}=0$
 				\begin{align*}
-					\Rightarrow 0 = -N \left( \frac{-e^{2}}{4\pi\epsilon_{0} r_{0}^{2}}\alpha - zB(1/\rho)e^{\nicefrac{r_{0}}{\rho}}\\
-					\Rightarrow zBe^{\nicefrac{r_{0}}{\rho}} = \frac{\rho}{r_{0}}\frac{-e^{2}}{4\pi\epsilon_{0} r_{0}}
+					\Rightarrow & 0 = -N \left( \frac{-e^{2}}{4\pi{}
+					\epsilon_{0} r_{0}^{2}}\alpha - zB(1/\rho)e^{
+					\frac{-r_{0}}{\rho}} \right) \\
+					\Rightarrow & z B e^{\nicefrac{r_{0}}{\rho}} = 
+					\frac{\rho}{r_{0}} \frac{e^{2}}{4\pi\epsilon_{0} 
+					r_{0}} \alpha
 				\end{align*}
-				Einsetzten:
-				\begin{align*}
-					\Rightarrow U = \frac{-Ne^{2}}{4\pi\epsilon_{0}r_{0}}\alpha \left( 1 - \frac{\rho}{r_{0}}
-				\end{align*}
+				Einsetzen:
+				\begin{center}
+					$\Rightarrow$ \fbox{$U = \frac{-Ne^{2}}{4\pi{}
+					\epsilon_{0}r_{0}}\alpha \Bigg( 1 - \underbrace{
+					\frac{\rho}{r_{0}}}_{\ll 1}\Bigg)$} Bindungsenergie
+				\end{center}
 				Die Bindungsenergie pro Ionenpaar N ist 
 				\begin{align*}
-					E_{B} := \frac{U}{N}
+					E_{B} \coloneqq \frac{U}{N}
 				\end{align*}
-				\emph{Beispiel}: (NaCl)
-				r_{0} = 0,28nm
-				\rho = 0,03nM
-				klammer dahinter ->
+				\paragraph*{Beispiel:} (NaCl)
+				\begin{center}
+					$\begin{rcases}
+						r_{0} = 0,28nm\\
+						\rho = 0,03nm
+				\end{rcases}$
+				$E_{B} = 8,23\text{eV (starke Bindung)}$\\		
+				\end{center}	
+			\paragraph*{Cäsiumchlorid:}
+				\subparagraph*{Beispiel:} CsCl, CnPd, AlNi, AgMg, 
+				$\ldots$
+				\subparagraph*{Bravais-Gitter:} einfach kubisch
+				\subparagraph*{Basis:} ein Cs und ein Cl
+				\subparagraph*{Bindung:} ionisch; Cs hat 
+				Elektronenkonfiguration 
+				1s$^{2}$2s$^{2}$2p$^{6}$3s$^{2}$3p$^{5}$3d$^{10}$
+				4s$^{2}$4p$^{6}$4d$^{10}$5s$^{2}$5p$^{6}$6s$^{1}$,	Cl 
+				hat Elektronenkonfiguration 1s$^{2}$2s$^{2}$2p$^{6}$
+				3s$^{2}$3p$^{5}$ $\Rightarrow$ analog zum NaCl
 				
-			Cäsiumchlorid:
-				\addmargin{1cm}
-				\emph{Beispiel}: CsCl, CnPd, AlNi, AgMg, $ldots$
-				\emph{Bravais-Gitter}: einfach kubisch
-				\emph{Basis}: ein Cs und ein Cl
-				\emph{Bindung}: ionisch
-				Cs hat Elektronenkonfiguration ....6s^{1}
-				Cl hat Elektronenkonfiguration .... 3p^{5}
-				\Rightarrow analog zum NaCl
+\marginpar {31.10.2013}	
 				
+			\paragraph*{Hexagonal dichteste Kugelpackung:}
+				\subparagraph*{Beispiel:} He, Zn, Co, Opale, $ßldots$
+				\subparagraph*{Bravais-Gitter:} es existieren zwei 
+				Möglichkeiten dichtester Kugelpackung ($\approx 74\%$)
+				\begin{enumerate}
+					\item	Hexagonal dichteste Packung (hcp)\\
+							BILD\\
+							Schichtfolge ABABAB$\ldots${}\\ 
+							$\Rightarrow${}
+							hexagonal primitive Elementarzelle mit Basis
+							aus zwei Atomen
+					\item	Flächenzentrierte dichteste Packung (fcc)\\
+							BILD\\
+							Schichtfolge ABCABCABC$\ldots${}\\ 
+							$\Rightarrow${}
+							fcc Elementarzelle mit einatomiger Basis
+				\end{enumerate}
+
+				\subparagraph*{Bindung:} van der Waals Wechselwirkung
+				Edelgasatome (z.B. He, Ne) besitzen bereits 
+				abgeschlossene Schalen. Die
+				Bindungsenergie durch die Wechselwirkung ist sehr 
+				klein, z.B. bei Neon $E_{B}=0,02\nicefrac{eV}{Atom}$\\
+				\subparagraph*{Einfaches Modell:}
+				BILD\\
+				\subparagraph*{Näherungen:} $M \gg m , r \gg 
+				\abs{x_{1}}, \abs{x_{2}}$ $\Rightarrow$ 
+				quantenmechanische Grundzustandsenergie $=
+				\frac{\hbar}{2} \left( 2 \frac{D}{m} - \frac{2}{8} 
+				\left( \frac{2e^{2}m}{4\pi\epsilon_{0}r^{3}} \right) 
+				\right) \propto \frac{1}{r^{6}}$ $\Rightarrow \hbar = 0 
+				\Rightarrow$ keine Wechselwirkung
+			\paragraph*{Diamantstruktur:}
+				\subparagraph*{Beispiele:} C, Si, Ge, $\ldots${}
+				\subparagraph*{Bravais-Gitter:} fcc
+				\subparagraph*{Basis:} zwei identisch Atome bei 
+				$(0,0,0)$ und ($\nicefrac{1}{4}$, $\nicefrac{1}{4}$, 
+				$\nicefrac{1}{4}$). Die Raumausfüllung ist sehr 
+				schlecht mit $34\%$ (vgl. $74\%$ bei hcp)
+				\subparagraph*{Bindung:} kovalent; die 
+				Elektronenkonfiguration des Kohlenstoffatoms ist 
+				1s$^{2}$2s$^{2}$2p$^{2}$, d.h. es fehlen 4 Elektronen 
+				um die Schale zu schließen. $\Rightarrow$ tetraedrische 
+				Bindung mit vier nächsten Nachbarn.\\Typische 
+				Bindungsenergien Kohlenstoff $E_{B} = 3,6$eV Silizium 
+				$E_{B} = 1,8$eV. Zwischen der \emph{kovalenten} und der
+				\emph{ionischen} Bindung gibt es einen kontinuierlichen 
+				Übergang.\\Elemente der Hauptgruppen	\textsc{III}, 
+				\textsc{IV} und \textsc{V} tendieren zur kovalenten 
+				Bindung (z.B GaAs), Elemente mit fast abgeschlossenen 
+				Schalen zur ionischen Bindung. Bei der 
+				\emph{metallischen Bindung} werden die Elektronen 
+				völlig delokalisiert, d.h. feste Ionenrümpfe und ein 
+				"`Gas"' freier Elektronen ($\Rightarrow$ gute 
+				Leitfähigkeit)			
+			\paragraph*{Kubische Zinksulfidstruktur:}
+				\subparagraph*{Beispiel:} CdS, ZnS, SiC, $\ldots$
+				\subparagraph*{Bravais-Gitter:} fcc
+				\subparagraph*{Basis:} ein Zn und ein S $\Rightarrow$ 
+				keine Inversionssymmetrie ($\vec{r} \; 
+				\cancel{\rightarrow} -\vec{r}$)	
+	
+	\subsection{Das reziproke Gitter und Methoden der Strukurbestimmung}
+		\paragraph{Beugung von Röntgenstrahlung am Kristall:}
+			BILD
+			\subparagraph{Behauptung:} Die Beugungsamplitude ist 
+			proportional zur Fouriertransformierten der Elektronendichte
+			\subparagraph{Beweis:} Voraussetzungen:
+				\begin{enumerate}
+					\item	elastische Beugung $\Leftrightarrow$ 
+					Energieerhaltung $\Leftrightarrow \abs{k} = 
+					\abs{k'}$
+					\item	einmalige Streuung im Kristall
+					\item	lokale Amplitude ist proportional zur 
+					Elektronendichte $\rho (\vec{r})$
+				\end{enumerate}
+		
+		BILD
+		
+		\begin{align*}
+			\Delta = \cos (\phi) \cdot \abs{\vec{r}} \\
+			\Delta \phi = \frac{2\pi}{\lambda} entpsricht \text{Phasenverschiebung} \\
+			\Rightarrow \Delta \phi = \frac{2\pi}{\lambda} \cos (\phi) abs{\vec{r}} = \abs{\vec{k}} \cdot \abs{\vec{r}} \cdot \cos (\phi) = \vec{k} \cdot \vec{r} \\
+			\Delta ' = \sin \alpha \cdot \abs{vec{r}} = \sin (\phi ' - 90°) \cdot XXXX = -\cos (\phi ') \cdot \abs{vec{r}} \\
+			\Delta \phi_{ges} = (\vec{k} - \vec{k'}) \cdot \vec{r} =: \Delta \vec{k} \cdot \vec{r}
+		\end{align*}
+		summiere über alle Orte $\vec{r}$ $\rightarrow$ Beugungsamplitude
+		\begin{align*}
+			A(\Delta\vec{k}) \propto \int_{-\inf}^{+\inf} \rho (\vec{r}) e^{-i\Delta\vec{k}\cdot\vec{r}} d^{3}x
+		\end{align*}		
+		KASTEN DRUM
+		oder umgekehrt
+		\begin{align*}
+			\rho (\vec{r}) \propto \int_{-\inf}^{+\inf} A(\Delta\vec{k}) e^{+i\Delta\vec{k}\cdot\vec{r}} d^{3}x
+		\end{align*}
+		KASTEN DRUM
+		\begin{itemize}
+		\item Im Allgemeinen werden jedoch Intensitäten gemessen (Betrag des Poyntingvektors); Messung $\Rightarrow \abs{A}^{2} entspricht \text{Intensität} druchgestrichernerdoppelpfeil A \in \mathbb{C}$
+		$\Rightarrow \rho (\vec{r})$ kann nicht ohne weiteres bestimmt werden\\
+		\item A ist Funktion von 
+		
+			\item	Richtungsänderung
+			\item	Wellenlänge
+		\end{itemize}
+		
+		Die Ladungsdichte $\rho (\vec{r})$ ist eine Gitterfunktion und bezüglich Translationen von Gittervektoren invariant, d.h.
+		$\rho (\vec{r}) = \rho (\vec{r}+\vec{T})$ mit $\vec{T} = u\vec{a_{1}} + v\vec{a_{2}} + w\vec{a_{3}}$, $u, v, w \in \mathbb{Z}$
+		\begin{align*}
+			A(\Delta\vec{k}) \propto \int_{-inf}^{+inf} \rho (\vec{r}) e^{irgendwasvonoben} d^{3}x\\
+			=\int_{-inf}^{+inf} \rho (\vec{r}-\vec{T}) e^{sdafjadslk} d^{3}x \\
+			\int_{-inf}^{+inf} \rho (\vec{r}) e^{-i\Delta\vec{k}(\vec{r}-\vec{T})} d^{3}x \\
+			=
+ 		\end{align*}
+		 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 \end{document}
